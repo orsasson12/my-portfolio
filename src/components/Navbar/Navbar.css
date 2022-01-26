@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.navBar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+background-color: #7a7adb;
+background-image: linear-gradient(315deg, #313155 0%, #170e13 50%);
+
+
+    color: white;
+    position:sticky;
+    z-index:10;
+}
+
+.navBarLogo{
+    font-size: 2rem;
+    margin: .9rem;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.navLinks ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navLinks ul li {
+    list-style: none;
+    cursor: pointer;
+    padding: 1rem;
+    display: block;
+}
+
+.navLinks ul li:hover{
+    transition: 0.3s ease-in-out;
+    color: #0cbaba;
+}
+.navLinks:active{
+    border-bottom: #0cbaba;
+}
+.socialMedia ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.socialMedia ul li {
+    list-style: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1.2rem;
+    display: block;
+}
+.socialMedia ul li:hover{
+    transition: 0.3s ease-in-out;
+    color: #380036;
+}
+
+
+.faBars{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+}
+@media screen and (max-width:960px){
+    .navBar{
+        transition: 0.8s all ease
+    }
+}
+@media (max-width:405px){
+    .faBars{
+        display: flex;
+    }
+    .navLinks{
+        display: none;
+        width: 100%;
+    }
+    .socialMedia{
+        display: none;
+          width: 100%;
+    }
+    .navBar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navLinks ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    .navLinks li{
+        text-align: center;
+    }
+    
+    .socialMedia li{
+        text-align: center;
+    }
+    .socialMedia ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    #hidden{
+        display: flex;
+    
+    }
+}
